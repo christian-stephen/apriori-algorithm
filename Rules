@@ -1,0 +1,57 @@
+Summary:
+---------------------------------------------------
+Data filename: sample_data
+Total rows in the original set: 149
+Total rules discovered: 12
+The selected measures: Support=0.50 Confidence=0.70
+Total processing time: 0.007 seconds
+---------------------------------------------------
+Discovered Rules:
+
+Rule #1: (Support=0.67, Confidence=0.93)
+{ node-caps=no inv-nodes=0-2 }
+    ---> { irradiat=no } 
+
+Rule #2: (Support=0.67, Confidence=0.97)
+{ node-caps=no irradiat=no }
+    ---> { inv-nodes=0-2 } 
+
+Rule #3: (Support=0.67, Confidence=0.96)
+{ inv-nodes=0-2 irradiat=no }
+    ---> { node-caps=no } 
+
+Rule #4: (Support=0.67, Confidence=0.86)
+{ node-caps=no }
+    ---> { inv-nodes=0-2 irradiat=no } 
+
+Rule #5: (Support=0.67, Confidence=0.88)
+{ inv-nodes=0-2 }
+    ---> { node-caps=no irradiat=no } 
+
+Rule #6: (Support=0.67, Confidence=0.83)
+{ irradiat=no }
+    ---> { node-caps=no inv-nodes=0-2 } 
+
+Rule #7: (Support=0.70, Confidence=0.92)
+{ inv-nodes=0-2 }
+    ---> { irradiat=no } 
+
+Rule #8: (Support=0.70, Confidence=0.87)
+{ irradiat=no }
+    ---> { inv-nodes=0-2 } 
+
+Rule #9: (Support=0.72, Confidence=0.93)
+{ node-caps=no }
+    ---> { inv-nodes=0-2 } 
+
+Rule #10: (Support=0.72, Confidence=0.96)
+{ inv-nodes=0-2 }
+    ---> { node-caps=no } 
+
+Rule #11: (Support=0.69, Confidence=0.89)
+{ node-caps=no }
+    ---> { irradiat=no } 
+
+Rule #12: (Support=0.69, Confidence=0.86)
+{ irradiat=no }
+    ---> { node-caps=no } 
