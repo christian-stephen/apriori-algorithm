@@ -1,10 +1,10 @@
-from itertools import repeat
 from export_result import *
 from generate_candidates import *
 from generate_rules import *
+from itertools import repeat
 from load_database import *
 from prune_itemsets import *
-import timeit
+from timeit import default_timer
 
 def apriori():
     """Performs the Apriori algorithm."""
@@ -15,7 +15,7 @@ def apriori():
     min_conf = read_measure("confidence")
 
     # Start timer to keep track of processing time.
-    start_time = timeit.default_timer()
+    start_time = default_timer()
     
     itemset_sups = {}
 
@@ -36,7 +36,7 @@ def apriori():
     candidate_rules, rule_confs = generate_rules(total_freq_itemsets, itemset_sups, min_conf)
 
     # End timer to get processing time.
-    processing_time = timeit.default_timer() - start_time
+    processing_time = default_timer() - start_time
 
     # Output resulting association rules to Rules file.
     num_trans = len(transactions)
