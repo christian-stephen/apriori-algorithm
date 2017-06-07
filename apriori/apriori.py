@@ -44,9 +44,3 @@ def apriori():
 
 if __name__ == '__main__':
     apriori()
-        
-        
-    
-
-    
-
