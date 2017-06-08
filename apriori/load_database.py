@@ -1,7 +1,6 @@
 """Module for loading databases."""
 
 from __future__ import print_function
-from os import path
 
 def read_database():
     """Reads in a user-specified database."""
