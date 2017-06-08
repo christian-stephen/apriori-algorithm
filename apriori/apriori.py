@@ -42,5 +42,5 @@ def apriori():
     num_trans = len(transactions)
     export_result(fname, num_trans, candidate_rules, min_sup, min_conf, itemset_sups, rule_confs, processing_time)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     apriori()
