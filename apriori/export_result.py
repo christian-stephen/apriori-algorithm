@@ -5,7 +5,7 @@ from __future__ import print_function
 def export_result(fname, num_trans, candidate_rules, minsup, minconf, itemset_sups, rule_confs, processing_time):
     """Prints association rules to Rules file."""  
     try:
-        f = open('Rules', 'w')
+        f = open("Rules", "w")
         try:
             print("Summary:", file=f)
             print("---------------------------------------------------", file=f)
