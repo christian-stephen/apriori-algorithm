@@ -4,7 +4,7 @@ from __future__ import print_function
 
 def read_database():
     """Reads in a user-specified database."""
-    fname = ''
+    fname = ""
     attributes = []
     transactions = []
     while True:
