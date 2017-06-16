@@ -30,7 +30,7 @@ def read_database():
     return fname, attributes, transactions
 
 def read_measure(measure):
-    """Reads in user-specified measures."""
+    """Reads in a user-specified measure."""
     while True:
         try: 
              measure_val = float(raw_input("\nEnter minimum " + measure + " value [0.0-1.0]: "))
