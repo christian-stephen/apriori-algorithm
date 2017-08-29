@@ -2,8 +2,7 @@
 
 def generate_candidate_one_itemset(transactions):
     """Generates candidate 1-itemset."""
-    candidate_one_itemset = {frozenset([item, item]) for item in set.union(*transactions)}
-    return candidate_one_itemset
+    return {frozenset([item, item]) for item in set.union(*transactions)}
 
 def generate_candidate_itemsets(itemsets, itemset_sups):
     """Generates candidate k-itemsets."""
