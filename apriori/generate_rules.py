@@ -10,9 +10,9 @@ def generate_rules(freq_itemsets, itemset_sups, min_conf):
 
     def sufficient_confidence(candidate_rule):
         """Checks whether a candidate rule has sufficient confidence."""
-        confidence = 0;
-        if itemset_sups[candidate_rule[0]] != 0:
-            confidence = itemset_sups[candidate_rule[0] | candidate_rule[1]] / itemset_sups[candidate_rule[0]]
+        confidence = (itemset_sups[candidate_rule[0] | candidate_rule[1]] / itemset_sups[candidate_rule[0]] 
+                      if itemset_sups[candidate_rule[0]] 
+                      else 0)
         if confidence >= min_conf:
             rule_confs[candidate_rule] = confidence
             return True
