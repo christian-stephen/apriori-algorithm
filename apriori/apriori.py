@@ -39,8 +39,7 @@ def apriori():
     processing_time = default_timer() - start_time
 
     # Output resulting association rules to Rules file.
-    num_trans = len(transactions)
-    export_result(fname, num_trans, candidate_rules, min_sup, min_conf, itemset_sups, rule_confs, processing_time)
+    export_result(fname, len(transactions), candidate_rules, min_sup, min_conf, itemset_sups, rule_confs, processing_time)
 
 if __name__ == "__main__":
     apriori()
