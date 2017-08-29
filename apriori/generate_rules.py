@@ -26,8 +26,7 @@ def generate_rules(freq_itemsets, itemset_sups, min_conf):
             antecedents = set()
             for comb in combinations(pruned_freq_itemset, k - 1):
                 antecedent = frozenset(comb)
-                consequence = freq_itemset - antecedent
-                candidate_rule = (antecedent, consequence)
+                candidate_rule = (antecedent, freq_itemset - antecedent)
                 if sufficient_confidence(candidate_rule):
                     antecedents |= antecedent
                     rules.append(candidate_rule)
@@ -35,4 +34,4 @@ def generate_rules(freq_itemsets, itemset_sups, min_conf):
             if k > len(pruned_freq_itemset):
                 k = len(pruned_freq_itemset) 
             k -= 1
-    return rules, rule_confs  
+    return rules, rule_confs
