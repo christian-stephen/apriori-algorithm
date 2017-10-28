@@ -34,7 +34,7 @@ def read_measure(measure):
     while True:
         try: 
              measure_val = float(raw_input("\nEnter minimum " + measure + " value [0.0-1.0]: "))
-             if measure_val >= 0 and measure_val <= 1:
+             if 0 <= measure_val <= 1:
                  break
              else:
                  print("\nERROR: Minimum " + measure + " value out of range. Try another value.")
