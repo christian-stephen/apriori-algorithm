@@ -28,7 +28,7 @@ def apriori():
 
     # Generate k-itemsets from frequent (k-1)-itemset and then prune to get the frequent k-itemset.
     for _ in repeat(None, len(attributes)):
-        candidate_itemset = generate_candidate_itemsets(freq_k_itemsets, itemset_sups)
+        candidate_itemset = generate_candidate_itemsets(freq_k_itemsets)
         freq_k_itemsets, itemset_sups = prune_itemsets(candidate_itemset, transactions, min_sup, itemset_sups)
         total_freq_itemsets |= (freq_k_itemsets)
 
